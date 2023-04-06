@@ -10,7 +10,7 @@
 //+create binary search
 //+add method description
 //+create unit-tests
-//create separate method to split ArrayList and LinkedList
+//+create separate method to split ArrayList and LinkedList
 
 import java.util.ArrayList;
 import java.util.List;
