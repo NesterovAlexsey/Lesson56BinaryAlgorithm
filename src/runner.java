@@ -32,6 +32,13 @@ public class runner {
     System.out.println(index);
   }
 
+  /**
+   * Binary method for find target element in a pre-sorted descending list of distinct numbers.
+   * @param listOfData - the list in which the value is searched
+   * @param target - value to be found
+   * @return - index of the searched component in the list or
+   * return -1 if the element is not on the list
+   */
   private static int findIndexOf(List<Integer> listOfData, int target) {
     int left = 0;
     int right = listOfData.size() - 1;
