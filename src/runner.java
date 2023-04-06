@@ -6,6 +6,12 @@
 //
 //Используйте в качестве образца задачу 2 из классной работы.
 
+//Plan max:
+//create binary search
+//add method description
+//create unit-tests
+//create separate method to split ArrayList and LinkedList
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +32,22 @@ public class runner {
     System.out.println(index);
   }
 
-  private static int findIndexOf(List<Integer> ListOfData, int target) {
+  private static int findIndexOf(List<Integer> listOfData, int target) {
+    int left = 0;
+    int right = listOfData.size() - 1;
+    while (left < right) {
+      int center = (left + right) / 2;
+      if (listOfData.get(center) == target) {
+        return center;
+      }
+
+      if (listOfData.get(center) < target) {
+        right = center;
+      } else {
+        left = center +1;
+      }
+    }
+
     return -1;
   }
 }
