@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 
@@ -74,6 +75,27 @@ public class findIndexOfTest {
     //act
     int index1 = runner.findIndexOf(test, target1);
     int index2 = runner.findIndexOf(test, target2);
+
+    //assert
+    assertEquals(2, index1);
+    assertEquals(4, index2);
+  }
+
+  @Test
+  public void testTypeOfList() {
+    List<Integer> test = new LinkedList<>();
+    test.add(9);
+    test.add(7);
+    test.add(0);
+    test.add(-3);
+    test.add(-12);
+
+    int target1 = 0;
+    int target2 = -12;
+
+    //act
+    int index1 = runner.checkListType(test, target1);
+    int index2 = runner.checkListType(test, target2);
 
     //assert
     assertEquals(2, index1);

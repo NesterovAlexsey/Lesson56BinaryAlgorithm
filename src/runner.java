@@ -9,19 +9,21 @@
 //Plan max:
 //+create binary search
 //+add method description
-//create unit-tests
+//+create unit-tests
 //create separate method to split ArrayList and LinkedList
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class runner {
 
   /**
    * Binary method for find target element in a pre-sorted descending list of distinct numbers.
+   *
    * @param listOfData - the list in which the value is searched
-   * @param target - value to be found
-   * @return - index of the searched component in the list or
-   * return -1 if the element is not on the list
+   * @param target     - value to be found
+   * @return - index of the searched component in the list or return -1 if the element is not on the
+   * list
    */
   public static int findIndexOf(List<Integer> listOfData, int target) {
     int left = 0;
@@ -44,5 +46,15 @@ public class runner {
     }
 
     return -1;
+  }
+
+  public static int checkListType(List<Integer> listOfData, int target) {
+    int result;
+    if (listOfData instanceof ArrayList) {
+      result = findIndexOf(listOfData, target);
+    } else {
+      result = listOfData.indexOf(target);
+    }
+    return result;
   }
 }
