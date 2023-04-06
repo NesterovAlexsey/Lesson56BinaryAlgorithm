@@ -44,8 +44,12 @@ public class runner {
       if (listOfData.get(center) < target) {
         right = center;
       } else {
-        left = center +1;
+        left = center + 1;
       }
+    }
+
+    if (left < listOfData.size() && listOfData.get(left) == target) {
+      return left;
     }
 
     return -1;
